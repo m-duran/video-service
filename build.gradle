@@ -38,6 +38,19 @@ dependencies {
 	compileOnly('org.projectlombok:lombok')
 	testImplementation('org.springframework.boot:spring-boot-starter-test')
 	compile 'mysql:mysql-connector-java'
+	// https://mvnrepository.com/artifact/com.github.paulcwarren/spring-content-rest
+	compile group: 'com.github.paulcwarren', name: 'spring-content-rest-boot-starter', version: '0.8.0'
+	// https://mvnrepository.com/artifact/com.github.paulcwarren/spring-content-s3
+	compile group: 'com.github.paulcwarren', name: 'spring-content-s3-boot-starter', version: '0.8.0'
+
+
+	// these were removed from jdk-11 so they must be included manually
+	// https://mvnrepository.com/artifact/com.sun.xml.bind/jaxb-core
+	compile group: 'com.sun.xml.bind', name: 'jaxb-core', version: '2.3.0.1'
+	// https://mvnrepository.com/artifact/javax.xml.bind/jaxb-api
+	compile group: 'javax.xml.bind', name: 'jaxb-api', version: '2.3.1'
+	// https://mvnrepository.com/artifact/com.sun.xml.bind/jaxb-impl
+	compile group: 'com.sun.xml.bind', name: 'jaxb-impl', version: '2.3.2'
 }
 
 task unpack(type: Copy) {
